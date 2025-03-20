@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="mailto:nkosanamolefe7@gmail.com" aria-label="Email"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/gn-molefe" aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/nkosanamolefe" aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <!-- <button class="dark-mode-toggle" title="Toggle Dark Mode"></button> Dark mode button -->
+      </nav>
+    </header>
+    <main class="main-project">
+      <section>
+        <div class="project-header">
+          <h1>365 Customer Churn Analysis</h1>
+
+          <div class="metadata-section">
+            <div class="tags-container used-tools">
+              <p class="metadata-label">Used Tools:</p>
+              <span class="tag">MySQL</span>
+              <span class="tag">Tableau</span>
+            </div>
+          </div>
+
+          <div class="metadata-section">
+            <div class="tags-container used-tools">
+              <p class="metadata-label">Project Type:</p>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Exploratory Data Analysis</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="metadata-section used-tools">
+            <p class="metadata-label">Relevant Link</p>
+            <a
+              href="https://github.com/nkosanamolefe/365-customer-churn-analysis"
+              target="_blank"
+              rel="noopener"
+              class="link"
+              >https://github.com/nkosanamolefe/365-customer-churn-analysis</a
+            >
+          </div>
+        </div>
+
+        <div class="project-content">
+        <div id="markdown-content">
+        <!-- The Markdown content will be rendered here -->
+      </div>
+          </div>
+        </div>
+        
+      </section>
+      
+    </main>
+    <footer>
+      <p>© 2025 nkosana. All rights reserved.</p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.4/dist/purify.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      const project = {
+        name: "365 Customer Churn Analysis",
+        url: "https://raw.githubusercontent.com/nkosanamolefe/365-customer-churn-analysis/refs/heads/main/README.md",
+        baseUrl: "https://raw.githubusercontent.com/nkosanamolefe/365-customer-churn-analysis/main/"
+      };
+
+      function loadMarkdown(url, baseUrl) {
+        fetch(url)
+        .then(response => response.text())
+        .then(markdownContent => {
+          // Convert relative image URLs to absolute URLs
+          const updatedContent = markdownContent.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
+          if (!src.startsWith('http')) {
+            src = baseUrl + src;
+          }
+          return `![${alt}](${src})`;
+          });
+
+          const sanitizedContent = DOMPurify.sanitize(marked.parse(updatedContent));
+          document.getElementById("markdown-content").innerHTML = sanitizedContent;
+        })
+        .catch(error => console.error('Error fetching markdown content:', error));
+      }
+
+      // Load the project
+      loadMarkdown(project.url, project.baseUrl);
+      });
+    </script>
+    </script>
+  </body>
+</html>

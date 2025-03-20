@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="mailto:nkosanamolefe7@gmail.com" aria-label="Email"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/gn-molefe" aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/nkosanamolefe" aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+          <!-- <button class="dark-mode-toggle" title="Toggle Dark Mode"></button> Dark mode button -->
+      </nav>
+        
+    </header>
+   <main class="main-project">
+    <section>
+        <div class="project-header">
+          <h1>SQL Projects</h1>
+
+          <div class="metadata-section">
+            <div class="tags-container used-tools">
+              <p class="metadata-label">Used Tools:</p>
+              <span class="tag">MySQL</span>
+              <span class="tag">DataLab</span>
+            </div>
+          </div>
+
+          <div class="metadata-section">
+            <div class="tags-container used-tools">
+              <p class="metadata-label">Project Type:</p>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Exploratory Data Analysis</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="metadata-section used-tools">
+            <p class="metadata-label">Relevant Link</p>
+            <a
+              href="https://github.com/nkosanamolefe/sql"
+              target="_blank"
+              rel="noopener"
+              class="link"
+              >https://github.com/nkosanamolefe/sql</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="project-content">
+            <div class="project-summary">
+        <h2>Project Background and Overview</h2>
+            </div>
+        </div> -->
+        <div class="tab-container">
+          <button class="tab-button" data-tab="asset-management">Airbnb Insights</button>
+          <button class="tab-button" data-tab="advisory">Student Mental Health</button>
+          <button class="tab-button" data-tab="legal">HR</button>
+          <!-- <button class="tab-button" data-tab="credit" id="defaultOpen">CREDIT</button>
+          <button class="tab-button" data-tab="real-estate">REAL ESTATE</button> -->
+      </div>
+      
+      <div id="asset-management" class="tab-content">
+        <div id="asset-management-content"></div>
+      </div>
+      
+      <div id="advisory" class="tab-content">
+        <div id="advisory-content"></div>
+      </div>
+      
+      <div id="legal" class="tab-content">
+        <div id="legal-content"></div>
+      </div>
+      
+      <div id="credit" class="tab-content">
+        <div id="credit-content"></div>
+      </div>
+      
+      <div id="real-estate" class="tab-content">
+        <div id="real-estate-content"></div>
+      </div>
+    </section>
+    </main>
+        <footer>
+            <p>© 2025 nkosana. All rights reserved.</p>
+        </footer>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/tabs-and-markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.4/dist/purify.min.js"></script>
+</body>
+</html>

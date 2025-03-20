@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mailto:nkosanamolefe7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/gn-molefe" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/nkosanamolefe" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <!-- <button class="dark-mode-toggle" title="Toggle Dark Mode"></button> Dark mode button -->
+    </nav>
+
+  </header>
+  <main class="main-project">
+    <section class="markdown-content">
+      <div class="project-header">
+        <h1>Dashboards</h1>
+
+
+        <!-- <div class="metadata-section">
+            <div class="tags-container used-tools">
+              <p class="metadata-label">Project Type:</p>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="metadata-section used-tools">
+            <p class="metadata-label">Relevant Link</p>
+            <a
+              href="https://github.com/nkosanamolefe/data-visualization"
+              target="_blank"
+              rel="noopener"
+              class="link"
+              >https://github.com/nkosanamolefe/data-visualization</a
+            >
+          </div>
+        </div> -->
+
+        <!-- <div class="project-content">
+            <div class="project-summary">
+        <h2>Project Background and Overview</h2>
+            </div>
+        </div> -->
+        <div class="tab-container">
+          <button class="tab-button" data-tab="asset-management">Customer Churn</button>
+          <button class="tab-button" data-tab="legal">HR</button>
+          <!-- <button class="tab-button" data-tab="credit" id="defaultOpen">Competitor Sales</button> -->
+          <!-- <button class="tab-button" data-tab="real-estate">REAL ESTATE</button> -->
+        </div>
+
+        <div id="asset-management" class="tab-content">
+          <h2>Customer Churn Analysis</h2>
+          <div class="metadata-section">
+            <div class="tags-container used-tools">
+              <span class="tag">MySQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Streamlit</span>
+            </div>
+          </div>
+          <div class="summary">
+            <div class="goal">
+              <h3>Goal</h3>
+              <p>This project aims at creating an ETL pipeline that builds analytical tables for US air transport
+                analysts with a focus on US domestic air travel. The tables will allow the analysts to investigate the
+                links between US domestic flights, aircraft, engine types, airports, airlines and other variables so
+                they can produce meaningful insights and MI.</p>
+            </div>
+            <div class="process">
+              <h3>Process</h3>
+              <p>Data is downloaded onto local storage first, then moved into the cloud, to AWS S3 buckets, and then
+                into Amazon Redshift. Once the Redshift cluster is up and running, the data is loaded from S3 to staging
+                tables, and then from the staging tables to the final flights fact table and the date, time, aircraft,
+                airlines, and airports dimension tables.</p>
+            </div>
+            <div class="highlights">
+              <h3>Highlights</h3>
+              <p>The entire project is carried out using Python AWS SDK to automate as much of the ETL process as
+                possible. The file upload to S3 buckets, creation of IAM role, and launch of Redshift clusters all
+                happen programmatically – rather than using the AWS user interface in the browser, making the pipeline
+                less prone to errors and more repeatable.</p>
+            </div>
+          </div>
+
+          <img src="assets/images/dashboards/365_churn_rates.png" alt="" />
+          <img src="assets/images/dashboards/365_churn_customers.png" alt="" />
+          <img src="assets/images/dashboards/365_churn_country.png" alt="" />
+
+          <div id="asset-management-content"></div>
+        </div>
+
+        <div id="advisory" class="tab-content">
+          <div id="advisory-content"></div>
+        </div>
+
+        <div id="legal" class="tab-content">
+          <div id="legal-content"></div>
+
+        </div>
+
+        <div id="credit" class="tab-content">
+          <div id="credit-content"></div>
+        </div>
+
+        <div id="real-estate" class="tab-content">
+          <div id="real-estate-content"></div>
+        </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 nkosana. All rights reserved.</p>
+  </footer>
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/dashboards-markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.4/dist/purify.min.js"></script>
+</body>
+
+</html>

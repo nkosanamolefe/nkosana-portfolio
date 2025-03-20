@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <!-- <a href="#projects">Projects</a> -->
+      <a href="mailto:nkosanamolefe7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/gn-molefe" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/nkosanamolefe" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <!-- <button class="dark-mode-toggle" title="Toggle Dark Mode"></button> -->
+      <!-- Dark mode button -->
+      <!-- Add more links if needed -->
+    </nav>
+  </header>
+  <main id="">
+    <div id="main-container">
+      <section id="about" class="fixed-about">
+        <div class="content-container">
+          <div class="profile-section">
+            <div class="profile-image-container">
+              <img src="/assets/images/headshot_1.jpg" alt="Nkosana Molefe" />
+            </div>
+            <p class="profile-name">Nkosana Molefe</p>
+            <p class="profile-job-description">Data Scientist</p>
+            <p class="profile-location">Based in Johannesburg, RSA</p>
+            <div class="profile-social">
+              <a href="mailto:nkosanamolefe7@gmail.com">Email</a>|
+              <a href="https://www.linkedin.com/in/gn-molefe/">LinkedIn</a>|
+              <a href="https://github.com/nkosanamolefe">GitHub</a>
+            </div>
+          </div>
+
+          <div class="about-section">
+            <!-- <h3>About Me</h3> -->
+            <p>I'm a data scientist who blends technical expertise with creativity to uncover insights, build predictive models, and drive data-powered decisions.</p>
+            <!-- <p>When I'm not coding, I enjoy strategizing for Fantasy Premier League, playing chess and exploring new music.</p> -->
+          </div>
+
+          <!-- <div class="skills-section">
+            <h3>Skills</h3>
+            <div class="skills-tags">
+              <span class="tag">Classification</span>
+              <span class="tag">NLP</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+              <span class="tag">RoBERTa</span>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="scrollable-content">
+      <section id="home" class="section">
+        <h2>Portfolio</h2>
+        <div class="breadcrumbs">
+          <a href="#home">Portfolio</a>
+          <span class="separator">/</span>
+          <span class="current-page">Current Project</span>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <a href="airbnb.html" class="project-card-link">
+              <h3>Airbnb Sentiment Analysis</h3>
+              <span class="tag">Classification</span>
+              <span class="tag">NLP</span>
+              <span class="tag">RoBERTa </span>
+              <p>
+                In today's highly competitive hospitality industry, guest satisfaction plays a crucial role in the
+                success of hosts. Developed a robust reviews analysis pipeline to track guest satisfaction trends for
+                Airbnb listings in Cape Town, preprocessing over 500K rows of review data and applying sentiment
+                analysis using RoBERTa from Hugging Face’s Transformers library, revealing that guest satisfaction for
+                the beach house, after a temporary decline of over 30% in 2017, recovered and remained high in
+                subsequent years.
+              </p>
+              <img src="assets/images/positive_sentiment_word_cloud.png" alt="Project 1 Thumbnail" />
+              <!-- <img src="/assets/images/airbnb/Airbnb-Logo.jpg" alt="Project 2 Thumbnail" /> -->
+            </a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <a href="smartwatch.html" class="project-card-link">
+              <h3>Smartwatch Discount Price Predictor</h3>
+              <span class="tag">Feature Engineering</span>
+              <span class="tag">Regression</span>
+              <p></p>
+              <!-- <img
+                    src="/assets/images/dataset-cover.png"
+                    alt="Project 2 Thumbnail"
+                  /> -->
+            </a>
+          </div>
+          <div class="project-card">
+            <a href="customer_churn_analysis.html" class="project-card-link">
+              <h3>Customer Churn Analysis</h3>
+              <span class="tag">MySQL</span>
+              <span class="tag">Tableau</span>
+              <p>
+                Conducted analysis for an e-Learning platform using SQL and Tableau, churn
+                metrics such as retention, re-subscription rate, and customer lifetime value; extracted and filtered
+                customer data with SQL, visualized churn patterns in Tableau to derive actionable insights, and
+                discovered a churn rate reduction from 9% to 4% (Dec 2021 – Oct 2022), surpassing industry benchmarks
+                (5–20%) while maintaining a 70% retention rate.
+              </p>
+              <img src="assets/images/positive_sentiment_word_cloud.png" alt="Project 1 Thumbnail" />
+            </a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <a href="healthmax_net_rev.html" class="project-card-link">
+              <h3>Net Revenue Management</h3>
+              <span class="tag">Data Transformation</span>
+              <span class="tag">VLOOKUP</span>
+              <span class="tag">Data Visualization</span>
+              <p>
+                The Fast Moving Consumer Goods (FMCG) industry is a dynamic
+                sector that significantly impacts daily life. This project focuses on
+                HealthMax, a leading FMCG company specializing in shampoos,
+                which faces challenges such as increasing competition and
+                shifting consumer preferences. The goal is to enhance
+                HealthMax's revenue and profitability through strategic
+                pricing, and product mix optimization.
+              </p>
+              <img src="/assets/images/healthmax/healthmax_logo.png" alt="Project 2 Thumbnail" />
+            </a>
+          </div>
+
+          <!-- Project 4 -->
+
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <a href="sql.html" class="project-card-link">
+              <h3>SQL Projects</h3>
+              <span class="tag">MySQL</span>
+              <span class="tag">EDA</span>
+              <span class="tag">Data Cleaning</span>
+              <p></p>
+              <!-- <img src="/assets/images/sql.jpg" alt="Project 2 Thumbnail" /> -->
+            </a>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card">
+            <a href="dashboards.html" class="project-card-link">
+              <h3>Dashboards</h3>
+              <span class="tag">MySQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Tableau</span>
+              <p></p>
+              <!-- <img
+                    src="/assets/images/dashboards/customer_churn_analysis.png"
+                    alt="Project 2 Thumbnail"
+                  /> -->
+            </a>
+          </div>
+
+          <!-- AI Agent -->
+          <!-- Project 6 -->
+          <!-- <div class="project-card">
+            <a href="project2-link" class="project-card-link">
+              <img src="project2-thumbnail.jpg" alt="Project 2 Thumbnail" />
+              <h3>AI Agents</h3></a
+            >
+              </div> -->
+          <!-- Add more project cards as needed -->
+        </div>
+
+        <!-- Expanded Project View -->
+        <div class="project-expanded">
+          <div class="project-header">
+            <h1>Project Title</h1>
+            <div class="metadata-section">
+              <!-- ... metadata content from airbnb.html ... -->
+            </div>
+          </div>
+          <div class="project-content">
+            <!-- ... project content ... -->
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 nkosana. All rights reserved.</p>
+  </footer>
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

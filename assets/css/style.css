@@ -14,7 +14,7 @@
   --header-footer-light: #f0f0f0;
 
   /* Layout variables */
-  --content-width:55%;
+  --content-width:50%;
   --content-margin-left: 35%;
   --transition-speed: 0.3s;
   --container-width: clamp(300px, 90vw, 1200px);
@@ -232,7 +232,7 @@ main {
 
 /* Improved card design with subtle animation */
 .project-card {
-  /* max-width: 510px; */
+  max-width: 100%;
   padding: 1rem;
   border-radius: 8px;
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
@@ -248,12 +248,11 @@ main {
 .project-card h3 {
   font-size: 1.17rem;
   font-weight: bold;
-  margin-top: 0em;
   color: var(--dark-text);
 }
 
 .project-card p {
-  margin: 1.5rem 0 2.5rem 0;
+  margin: 1rem 0 1rem 0;
   font-size: 0.95rem;
   line-height: 1.4rem;
   color: var(--card-text-color);

@@ -4,33 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="description" content="Nkosana Molefe - Data Scientist Portfolio showcasing projects in ML, Data Analysis, and Visualization">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preload" href="assets/css/style.css?v=1" as="style">
+  <link rel="preload" href="assets/js/script.js" as="script">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <title>Nkosana Molefe - Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Prefetch project pages -->
+  <link rel="prefetch" href="airbnb.html">
+  <link rel="prefetch" href="smartwatch.html">
+  <link rel="prefetch" href="customer_churn_analysis.html">
+  <link rel="prefetch" href="healthmax_net_rev.html">
+  <link rel="prefetch" href="sql.html">
+  <link rel="prefetch" href="dashboards.html">
+
+  <!-- Inline critical CSS -->
+  <style>
+    body { opacity: 0; transition: opacity 0.3s; }
+    .js-loaded body { opacity: 1; }
+    .fixed-about { min-height: 100vh; }
+  </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <!-- <a href="#projects">Projects</a> -->
-      <a href="mailto:nkosanamolefe7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/gn-molefe" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/nkosanamolefe" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <!-- <button class="dark-mode-toggle" title="Toggle Dark Mode"></button> -->
-      <!-- Dark mode button -->
-      <!-- Add more links if needed -->
-    </nav>
-  </header>
-  <main id="">
+  <main id="main-container">
     <div id="main-container">
+      <!-- About Me -->
       <section id="about" class="fixed-about">
         <div class="content-container">
           <div class="profile-section">
             <div class="profile-image-container">
-              <img src="assets/images/headshot_1.jpg" alt="Nkosana Molefe" />
+              <img src="assets/images/headshot_1.jpg" alt="Nkosana Molefe" loading="eager" />
             </div>
             <p class="profile-name">Nkosana Molefe</p>
             <p class="profile-job-description">Data Scientist</p>
@@ -41,13 +51,10 @@
               <a href="https://github.com/nkosanamolefe">GitHub</a>
             </div>
           </div>
-
           <div class="about-section">
-            <!-- <h3>About Me</h3> -->
             <p>I'm a data scientist who blends technical expertise with creativity to uncover insights, build predictive models, and drive data-powered decisions.</p>
             <!-- <p>When I'm not coding, I enjoy strategizing for Fantasy Premier League, playing chess and exploring new music.</p> -->
           </div>
-
           <!-- <div class="skills-section">
             <h3>Skills</h3>
             <div class="skills-tags">
@@ -61,12 +68,12 @@
               <span class="tag">RoBERTa</span>
               <span class="tag">RoBERTa</span>
               <span class="tag">RoBERTa</span>
-              <span class="tag">RoBERTa</span>
-            </div> -->
-          </div>
+            </div>
+          </div> -->
         </div>
       </section>
-    </div>
+    
+
     <div class="scrollable-content">
       <section id="home" class="section">
         <h2>Portfolio</h2>
@@ -93,7 +100,7 @@
                 the beach house, after a temporary decline of over 30% in 2017, recovered and remained high in
                 subsequent years.
               </p>
-              <img src="assets/images/positive_sentiment_word_cloud.png" alt="Project 1 Thumbnail" />
+              <img src="assets/images/positive_sentiment_word_cloud.png" alt="Project 1 Thumbnail" loading="lazy" />
               <!-- <img src="/assets/images/airbnb/Airbnb-Logo.jpg" alt="Project 2 Thumbnail" /> -->
             </a>
           </div>
@@ -123,7 +130,7 @@
                 discovered a churn rate reduction from 9% to 4% (Dec 2021 – Oct 2022), surpassing industry benchmarks
                 (5–20%) while maintaining a 70% retention rate.
               </p>
-              <img src="assets/images/positive_sentiment_word_cloud.png" alt="Project 1 Thumbnail" />
+              <img src="assets/images/positive_sentiment_word_cloud.png" alt="Project 1 Thumbnail" loading="lazy" />
             </a>
           </div>
 
@@ -143,7 +150,7 @@
                 HealthMax's revenue and profitability through strategic
                 pricing, and product mix optimization.
               </p>
-              <img src="/assets/images/healthmax/healthmax_logo.png" alt="Project 2 Thumbnail" />
+              <img src="assets/images/healthmax/healthmax_logo.png" alt="Project 2 Thumbnail" loading="lazy" />
             </a>
           </div>
 
@@ -202,12 +209,25 @@
         </div>
       </section>
     </div>
-    </div>
+</div>
   </main>
   <footer>
     <p>© 2025 nkosana. All rights reserved.</p>
   </footer>
-  <script src="assets/js/script.js"></script>
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        });
+    }
+
+    // Add loaded class for smooth page transition
+    document.documentElement.classList.add('js-loaded');
+  </script>
+  <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
